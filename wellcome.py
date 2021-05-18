@@ -174,7 +174,7 @@ def wellcome3(path):
       cod.append('wellcome_'+dia+'_03_'+str("{0:0=3d}".format(i)))
     instituto = ['Wellcome']*len(pags)
     atualizacao = [dia]*len(pags)
-
+    
     df = pd.DataFrame({'pol_titulo':nomes,'link':pags,'pol_texto':texto,'codigo':cod,'atualizacao':atualizacao,'pol_instituicao':instituto}) 
     path = path+'''\\wellcome_03.csv'''
     df.to_csv(path,index=False,sep=",")  
@@ -185,6 +185,11 @@ def wellcome3(path):
     print("Erro na função wellcome3")
 
 
+    
+    
+    
+    
+    
 
 
 
