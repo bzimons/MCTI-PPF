@@ -2,7 +2,7 @@
 # 23/03: observação: Site sofreu alteração, código precisa ser reformulado
 # 25/03: Link das oportunidades especificas fora do ar
 # Definição da função: nomedosite_nº
-# 1) Oportunidades, 2) Notícias, 3) Políticas
+# 1) Oportunidades, 2) Notícias, 3) Políticas, 4) Projetos
 #-------- Bibliotecas utilizadas
 import bs4
 import requests
@@ -13,9 +13,8 @@ import pandas as pd
 from datetime import datetime
 import os
 
-# Aderente à oportunidade abertas 01
-
-def wellcome1(path,keywords): # A entrada é o caminho do arquivo que vai ser definido no arquivo ppfcentral.py e as palavras-chaves
+# Função de oportunidade abertas 01
+def wellcome1(path,keywords='low- or middle- income country'): # A entrada é o caminho do arquivo que vai ser definido no arquivo ppfcentral.py e as palavras-chaves
   try:
     print('Início função das oportunidades wellcome')
     page = requests.get('https://wellcome.org/grant-funding/schemes') # Request para extrair a página html
@@ -115,7 +114,7 @@ def wellcome1(path,keywords): # A entrada é o caminho do arquivo que vai ser de
     print(e) 
     print("Erro na função wellcome1")
 
-
+# Função de notícias 02
 def wellcome2(path):
   try:
     print('Início função das noticias  wellcome')
@@ -153,6 +152,7 @@ def wellcome2(path):
     print(e) 
     print("Erro na função wellcome2")
 
+    # # Função de políticas 03
 def wellcome3(path):
   try:
     print('Início função de política  wellcome')
@@ -186,5 +186,5 @@ def wellcome3(path):
 
 
 
-# wellcome1('.','low- or middle- income country')
+
 
